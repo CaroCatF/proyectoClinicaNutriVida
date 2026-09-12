@@ -3,23 +3,49 @@
    Hoja de estilos personalizada
    ===================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
 :root {
-  --verde-bosque: #2f5233;
-  --verde-bosque-oscuro: #223c26;
-  --verde-salvia: #8aa888;
-  --verde-salvia-suave: #e7ede4;
-  --ocre: #c98a2e;
-  --ocre-oscuro: #a56f21;
-  --crema: #faf6ee;
-  --crema-tarjeta: #ffffff;
-  --carbon: #262b22;
-  --gris-calido: #6b7062;
-  --borde-suave: #e3ddcd;
+  /* Design system Nutri Vida */
+  --primary-900: #0F766E;
+  --primary-800: #0D9488;
+  --primary-700: #14B8A6;
+  --primary-500: #2DD4BF;
+  --primary-400: #10B981;
+  --primary-100: #CCFBF1;
+  --primary-50: #F0FDFA;
 
-  --fuente-display: "Fraunces", "Georgia", serif;
-  --fuente-texto: "Work Sans", "Segoe UI", sans-serif;
+  --neutral-900: #111C1A;
+  --neutral-700: #4A5A58;
+  --neutral-500: #889A98;
+  --neutral-200: #E2ECEB;
+  --neutral-100: #F4F9F9;
+  --neutral-0: #FFFFFF;
+  --slate-500: #64748B;
+  --slate-400: #94A3B8;
+
+  --success-text: #10B981;
+  --success-bg: #D1FAE5;
+  --warning-text: #F59E0B;
+  --warning-bg: #FEF3C7;
+  --danger-text: #EF4444;
+  --danger-bg: #FEE2E2;
+
+  /* Alias existentes conservados para no romper las páginas actuales */
+  --verde-bosque: var(--primary-900);
+  --verde-bosque-oscuro: #153B3B;
+  --verde-salvia: var(--primary-500);
+  --verde-salvia-suave: var(--primary-100);
+  --ocre: var(--primary-500);
+  --ocre-oscuro: var(--primary-900);
+  --crema: var(--neutral-100);
+  --crema-tarjeta: var(--neutral-0);
+  --carbon: var(--neutral-900);
+  --gris-calido: var(--neutral-700);
+  --borde-suave: var(--neutral-200);
+
+  --fuente-display: "Instrument Sans", "Segoe UI", sans-serif;
+  --fuente-texto: "Instrument Sans", "Segoe UI", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -487,4 +513,229 @@ article.entrada-blog h2 { margin-top: 2rem; font-size: 1.4rem; }
   color: #a33a28 !important;
   font-weight: 700;
   white-space: nowrap;
+}
+
+/* =====================================================
+   DESIGN SYSTEM FIGMA · NUTRI VIDA
+   Aplicación visual sobre las clases existentes
+   ===================================================== */
+
+body {
+  background-color: var(--neutral-100);
+  color: var(--neutral-900);
+  font-size: 14px;
+}
+
+h1, h2, h3, h4,
+.marca-nv,
+.pie-nv .marca-pie {
+  font-family: var(--fuente-display);
+  color: var(--neutral-900);
+}
+
+p,
+.form-label,
+.navbar-nav .nav-link,
+.texto-ayuda,
+.meta-servicio,
+.descripcion-servicio {
+  color: var(--neutral-700);
+}
+
+::placeholder {
+  color: var(--neutral-500) !important;
+  opacity: 1;
+}
+
+.encabezado-nv {
+  background-color: var(--neutral-0);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.marca-nv {
+  color: var(--neutral-900) !important;
+}
+
+.marca-nv .hoja-icono {
+  color: var(--primary-800);
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: var(--primary-800);
+  text-decoration-color: var(--primary-500);
+}
+
+.btn-nv-primario {
+  background: linear-gradient(135deg, #0F766E 0%, #0D9488 40%, #2DD4BF 100%);
+  border: 1px solid transparent;
+  border-radius: 24px;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(15, 118, 110, 0.18);
+}
+
+.btn-nv-primario:hover,
+.btn-nv-primario:focus,
+.btn-nv-primario:active {
+  background: linear-gradient(135deg, #0D9488 0%, #14B8A6 50%, #2DD4BF 100%);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(15, 118, 110, 0.24);
+}
+
+.btn-nv-secundario {
+  background-color: var(--neutral-0);
+  border: 1px solid var(--primary-800);
+  border-radius: 8px;
+  color: var(--primary-900);
+}
+
+.btn-nv-secundario:hover,
+.btn-nv-secundario:focus {
+  background-color: var(--primary-100);
+  border-color: var(--primary-900);
+  color: var(--primary-900);
+}
+
+.seccion-alterna {
+  background-color: var(--primary-50);
+}
+
+.tarjeta-beneficio,
+.tarjeta-servicio,
+.tarjeta-nutricionista,
+.tarjeta-blog,
+.tarjeta-formulario,
+.item-carrito,
+.tarjeta-admin-metrica,
+.menu-admin,
+.tabla-responsive {
+  background-color: var(--neutral-0);
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-servicio .franja-tipo,
+.avatar-iniciales,
+.tabla-admin thead th {
+  background-color: var(--primary-900);
+}
+
+.tarjeta-servicio .precio-servicio,
+.precio-carrito,
+.total-carrito {
+  color: var(--primary-900);
+}
+
+.tarjeta-servicio .imagen-servicio {
+  background-color: var(--primary-100);
+}
+
+.filtro-categoria {
+  border: 1px solid var(--primary-800);
+  border-radius: 4px;
+  color: var(--primary-900);
+}
+
+.filtro-categoria.activo,
+.filtro-categoria:hover {
+  background-color: var(--primary-100);
+  border-color: var(--primary-800);
+  color: var(--primary-800);
+}
+
+.form-control,
+.form-select {
+  border: 1px solid var(--neutral-200);
+  border-radius: 8px;
+  color: var(--neutral-900);
+  background-color: var(--neutral-0);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-800);
+  box-shadow: 0 0 0 0.2rem rgba(13, 148, 136, 0.16);
+}
+
+.contador-carrito {
+  background-color: var(--primary-100);
+  color: var(--primary-900);
+}
+
+.pie-nv {
+  background-color: #153B3B;
+  border-top: 1px solid #255454;
+  color: #E5F2F0;
+}
+
+.pie-nv h4,
+.pie-nv .marca-pie {
+  color: #FFFFFF;
+}
+
+.pie-nv a {
+  color: #C8E8E4;
+}
+
+.pie-nv a:hover {
+  color: var(--primary-500);
+}
+
+.linea-pie {
+  border-top-color: rgba(229, 242, 240, 0.18);
+  color: #B6D1CE;
+}
+
+.encabezado-admin {
+  background: linear-gradient(135deg, #0F766E 0%, #0D9488 40%, #2DD4BF 100%);
+}
+
+.encabezado-admin .marca-nv,
+.encabezado-admin .texto-sesion {
+  color: #FFFFFF !important;
+}
+
+.menu-admin a:hover,
+.menu-admin a.activo {
+  background-color: var(--primary-100);
+  color: var(--primary-800);
+}
+
+.tabla-admin thead th {
+  color: #FFFFFF;
+  border-color: var(--primary-900);
+}
+
+.tabla-admin tbody tr:nth-child(even) {
+  background-color: var(--neutral-100);
+}
+
+.alert-success {
+  background-color: var(--success-bg);
+  border-color: var(--success-bg);
+  color: var(--success-text);
+}
+
+.alert-warning {
+  background-color: var(--warning-bg);
+  border-color: var(--warning-bg);
+  color: var(--warning-text);
+}
+
+.alert-danger {
+  background-color: var(--danger-bg);
+  border-color: var(--danger-bg);
+  color: var(--danger-text);
+}
+
+.stock-critico {
+  color: var(--danger-text) !important;
+}
+
+@media (max-width: 767px) {
+  .tarjeta-formulario {
+    border-radius: 12px;
+  }
 }
