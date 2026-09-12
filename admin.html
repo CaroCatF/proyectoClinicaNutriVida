@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administración · NutriVida</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body class="fondo-admin">
+  <header class="encabezado-admin"><div class="container py-3 d-flex justify-content-between align-items-center gap-3"><a class="marca-nv" href="admin.html"><span class="hoja-icono">◆</span> NutriVida <small class="etiqueta-admin">Administración</small></a><div class="d-flex align-items-center gap-3"><span class="texto-sesion" data-usuario-sesion></span><button type="button" class="btn btn-sm btn-outline-light" data-cerrar-sesion>Cerrar sesión</button></div></div></header>
+  <main class="seccion"><div class="container"><div class="row g-4"><aside class="col-lg-3"><nav class="menu-admin" aria-label="Menú administrativo"><p class="menu-admin-titulo">Gestión del sistema</p><a class="activo" href="admin.html">Resumen</a><a href="admin-productos.html">Productos y servicios</a><a href="admin-usuarios.html">Usuarios</a><a href="productos.html">Ver tienda pública</a></nav></aside><section class="col-lg-9"><h1 class="titulo-seccion">Panel de administración</h1><p class="intro-seccion">Gestiona el catálogo y los usuarios de la tienda NutriVida desde un solo lugar.</p><div class="row g-4 mb-4"><div class="col-md-6"><article class="tarjeta-admin-metrica"><span class="metrica-label">Servicios publicados</span><strong id="total-productos-admin">0</strong><a href="admin-productos.html">Administrar catálogo →</a></article></div><div class="col-md-6"><article class="tarjeta-admin-metrica"><span class="metrica-label">Usuarios registrados</span><strong id="total-usuarios-admin">0</strong><a href="admin-usuarios.html">Administrar usuarios →</a></article></div></div><article class="tarjeta-formulario"><h2 class="h4">Alcance de esta vista</h2><ul class="mb-0"><li>Crear, editar y eliminar servicios del catálogo.</li><li>Gestionar usuarios, roles y datos de contacto.</li><li>Los cambios de esta entrega se guardan localmente en el navegador.</li></ul></article></section></div></div></main>
+  <script src="js/catalogo.js"></script><script src="js/almacenamiento.js"></script><script src="js/validaciones.js"></script><script src="js/admin.js"></script>
+</body>
+</html>

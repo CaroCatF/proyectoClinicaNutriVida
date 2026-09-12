@@ -1,0 +1,490 @@
+/* =====================================================
+   CLÍNICA NUTRICIONAL NUTRIVIDA
+   Hoja de estilos personalizada
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  --verde-bosque: #2f5233;
+  --verde-bosque-oscuro: #223c26;
+  --verde-salvia: #8aa888;
+  --verde-salvia-suave: #e7ede4;
+  --ocre: #c98a2e;
+  --ocre-oscuro: #a56f21;
+  --crema: #faf6ee;
+  --crema-tarjeta: #ffffff;
+  --carbon: #262b22;
+  --gris-calido: #6b7062;
+  --borde-suave: #e3ddcd;
+
+  --fuente-display: "Fraunces", "Georgia", serif;
+  --fuente-texto: "Work Sans", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--fuente-texto);
+  color: var(--carbon);
+  background-color: var(--crema);
+  line-height: 1.6;
+}
+
+main { min-height: 60vh; }
+
+h1, h2, h3, h4 {
+  font-family: var(--fuente-display);
+  color: var(--verde-bosque-oscuro);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+a { color: var(--verde-bosque); }
+a:hover { color: var(--ocre-oscuro); }
+
+p { max-width: 62ch; }
+
+.contenedor-angosto { max-width: 720px; }
+
+/* ---------- Botones ---------- */
+.btn-nv-primario {
+  background-color: var(--ocre);
+  border-color: var(--ocre);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.65rem 1.5rem;
+  border-radius: 6px;
+}
+.btn-nv-primario:hover,
+.btn-nv-primario:focus {
+  background-color: var(--ocre-oscuro);
+  border-color: var(--ocre-oscuro);
+  color: #fff;
+}
+.btn-nv-secundario {
+  background-color: transparent;
+  border: 1.5px solid var(--verde-bosque);
+  color: var(--verde-bosque);
+  font-weight: 600;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+}
+.btn-nv-secundario:hover {
+  background-color: var(--verde-bosque);
+  color: #fff;
+}
+
+/* ---------- Encabezado / navegación ---------- */
+.encabezado-nv {
+  background-color: var(--crema);
+  border-bottom: 1px solid var(--borde-suave);
+}
+.marca-nv {
+  font-family: var(--fuente-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--verde-bosque-oscuro) !important;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.marca-nv .hoja-icono { color: var(--ocre); }
+
+.navbar-nav .nav-link {
+  color: var(--carbon);
+  font-weight: 500;
+  margin: 0 0.35rem;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:hover {
+  color: var(--verde-bosque-oscuro);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--ocre);
+}
+
+/* ---------- Hero ---------- */
+.hero-nv {
+  padding: 4.5rem 0 4rem;
+}
+.hero-nv .eyebrow-libre { color: var(--gris-calido); }
+.hero-nv h1 {
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  max-width: 14ch;
+}
+.hero-nv .subcopia {
+  font-size: 1.1rem;
+  color: var(--gris-calido);
+  max-width: 46ch;
+}
+.hero-ilustracion { width: 100%; max-width: 420px; }
+
+.estadistica-hero {
+  border-left: 3px solid var(--ocre);
+  padding-left: 0.9rem;
+}
+.estadistica-hero .numero {
+  font-family: var(--fuente-display);
+  font-size: 1.6rem;
+  color: var(--verde-bosque-oscuro);
+  font-weight: 700;
+  display: block;
+}
+.estadistica-hero .etiqueta {
+  color: var(--gris-calido);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+/* ---------- Secciones generales ---------- */
+.seccion { padding: 3.5rem 0; }
+.seccion-alterna { background-color: var(--verde-salvia-suave); }
+.titulo-seccion { margin-bottom: 0.5rem; }
+.intro-seccion {
+  color: var(--gris-calido);
+  max-width: 60ch;
+  margin-bottom: 2.2rem;
+}
+
+/* ---------- Tarjetas de característica ---------- */
+.tarjeta-beneficio {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  padding: 1.6rem;
+  height: 100%;
+}
+.tarjeta-beneficio .icono-beneficio {
+  color: var(--ocre);
+  margin-bottom: 0.8rem;
+}
+.tarjeta-beneficio h3 { font-size: 1.15rem; }
+.tarjeta-beneficio p { color: var(--gris-calido); font-size: 0.96rem; }
+
+/* ---------- Tarjetas de servicio / producto ---------- */
+.tarjeta-servicio {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tarjeta-servicio .franja-tipo {
+  background-color: var(--verde-bosque);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  align-self: flex-start;
+  border-bottom-right-radius: 8px;
+}
+.tarjeta-servicio .cuerpo-servicio {
+  padding: 1.1rem 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.tarjeta-servicio h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+.tarjeta-servicio .descripcion-servicio {
+  color: var(--gris-calido);
+  font-size: 0.92rem;
+  flex-grow: 1;
+}
+.tarjeta-servicio .precio-servicio {
+  font-family: var(--fuente-display);
+  color: var(--verde-bosque-oscuro);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0.6rem 0;
+}
+.tarjeta-servicio .meta-servicio {
+  font-size: 0.82rem;
+  color: var(--gris-calido);
+  margin-bottom: 0.4rem;
+}
+
+.filtro-categoria {
+  border: 1.5px solid var(--verde-bosque);
+  color: var(--verde-bosque-oscuro);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.35rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.filtro-categoria.activo,
+.filtro-categoria:hover {
+  background-color: var(--verde-bosque);
+  color: #fff;
+}
+
+/* ---------- Avatares de equipo (sin fotos externas) ---------- */
+.avatar-iniciales {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: var(--verde-bosque);
+  color: #fff;
+  font-family: var(--fuente-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.tarjeta-nutricionista {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  padding: 1.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  height: 100%;
+}
+.tarjeta-nutricionista h3 { font-size: 1.05rem; margin-bottom: 0.15rem;}
+.tarjeta-nutricionista .especialidad {
+  color: var(--ocre-oscuro);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.tarjeta-nutricionista .horario {
+  color: var(--gris-calido);
+  font-size: 0.85rem;
+}
+
+/* ---------- Blog ---------- */
+.tarjeta-blog {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.portada-blog {
+  height: 160px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.tarjeta-blog .cuerpo-blog { padding: 1.2rem; }
+.tarjeta-blog h3 { font-size: 1.1rem; }
+.tarjeta-blog p { color: var(--gris-calido); font-size: 0.94rem; }
+
+article.entrada-blog p { max-width: 68ch; }
+article.entrada-blog h2 { margin-top: 2rem; font-size: 1.4rem; }
+
+/* ---------- Formularios ---------- */
+.tarjeta-formulario {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 12px;
+  padding: 2rem;
+}
+.form-label { font-weight: 600; color: var(--carbon); }
+.form-control:focus, .form-select:focus {
+  border-color: var(--verde-salvia);
+  box-shadow: 0 0 0 0.2rem rgba(47, 82, 51, 0.15);
+}
+.texto-ayuda { font-size: 0.85rem; color: var(--gris-calido); }
+.contador-caracteres {
+  font-size: 0.8rem;
+  color: var(--gris-calido);
+  text-align: right;
+  display: block;
+  margin-top: 0.2rem;
+}
+.mensaje-resultado-formulario { border-radius: 8px; }
+
+/* ---------- Footer ---------- */
+.pie-nv {
+  background-color: var(--verde-bosque-oscuro);
+  color: #f1efe6;
+  padding: 3rem 0 1.5rem;
+}
+.pie-nv h4 {
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 0.9rem;
+}
+.pie-nv a { color: #d8e3d4; text-decoration: none; }
+.pie-nv a:hover { color: var(--ocre); text-decoration: underline; }
+.pie-nv .marca-pie {
+  font-family: var(--fuente-display);
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 700;
+}
+.linea-pie {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  font-size: 0.85rem;
+  color: #b9c2b5;
+}
+
+/* Tablet: ajustamos tamaños intermedios antes de llegar al layout de escritorio */
+@media (max-width: 991px) {
+  .hero-nv h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+  .hero-ilustracion { max-width: 320px; }
+  .seccion { padding: 3rem 0; }
+}
+
+/* Móvil: layout de una sola columna y espaciados más compactos */
+@media (max-width: 767px) {
+  .hero-nv { padding: 3rem 0 2.5rem; text-align: left; }
+  .seccion { padding: 2.5rem 0; }
+  .tarjeta-formulario { padding: 1.4rem; }
+  .marca-nv { font-size: 1.25rem; }
+}
+
+/* Móvil pequeño: reducir aún más el tamaño de titulares largos */
+@media (max-width: 420px) {
+  .hero-nv h1 { font-size: 1.8rem; }
+  .titulo-seccion { font-size: 1.5rem; }
+}
+
+/* ---------- Carrito ---------- */
+.enlace-carrito { white-space: nowrap; }
+.contador-carrito {
+  background-color: var(--ocre);
+  color: #fff;
+  vertical-align: text-top;
+  font-size: 0.7rem;
+}
+.enlace-agenda-servicio {
+  display: inline-block;
+  margin-top: 0.7rem;
+  font-size: 0.85rem;
+  text-align: center;
+  text-decoration: none;
+}
+.lista-carrito { display: flex; flex-direction: column; gap: 1rem; }
+.item-carrito {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.item-carrito-info { min-width: 0; }
+.item-carrito-info h2 { overflow-wrap: anywhere; }
+.item-carrito-controles {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+.cantidad-carrito { width: 76px; }
+.precio-carrito { color: var(--verde-bosque-oscuro); min-width: 92px; text-align: right; }
+.total-carrito { font-family: var(--fuente-display); font-size: 1.25rem; color: var(--verde-bosque-oscuro); }
+
+/* ---------- Administración ---------- */
+.fondo-admin { background-color: var(--crema); }
+.encabezado-admin {
+  background-color: var(--verde-bosque-oscuro);
+  color: #fff;
+}
+.encabezado-admin .marca-nv { color: #fff !important; }
+.encabezado-admin .hoja-icono { color: var(--ocre); }
+.etiqueta-admin {
+  font-family: var(--fuente-texto);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #d8e3d4;
+  border-left: 1px solid rgba(255,255,255,0.35);
+  padding-left: 0.6rem;
+}
+.texto-sesion { color: #d8e3d4; font-size: 0.9rem; }
+.menu-admin {
+  background: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  padding: 1rem;
+  position: sticky;
+  top: 1rem;
+}
+.menu-admin-titulo {
+  color: var(--gris-calido);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 0.6rem;
+}
+.menu-admin a {
+  display: block;
+  border-radius: 6px;
+  color: var(--carbon);
+  padding: 0.65rem 0.75rem;
+  text-decoration: none;
+}
+.menu-admin a:hover, .menu-admin a.activo {
+  background-color: var(--verde-salvia-suave);
+  color: var(--verde-bosque-oscuro);
+  font-weight: 600;
+}
+.tarjeta-admin-metrica {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  padding: 1.4rem;
+  height: 100%;
+}
+.metrica-label { display: block; color: var(--gris-calido); font-size: 0.9rem; }
+.tarjeta-admin-metrica strong {
+  display: block;
+  color: var(--verde-bosque-oscuro);
+  font-family: var(--fuente-display);
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin: 0.4rem 0 0.7rem;
+}
+.tarjeta-admin-metrica a { text-decoration: none; font-weight: 600; }
+.tabla-responsive { overflow-x: auto; background: var(--crema-tarjeta); border: 1px solid var(--borde-suave); border-radius: 10px; }
+.tabla-admin { min-width: 760px; margin-bottom: 0; }
+.tabla-admin thead th { background-color: var(--verde-bosque); color: #fff; white-space: nowrap; }
+.tabla-admin tbody tr:last-child td { border-bottom: 0; }
+
+@media (max-width: 767px) {
+  .item-carrito { align-items: flex-start; flex-direction: column; }
+  .item-carrito-controles { width: 100%; justify-content: space-between; flex-wrap: wrap; }
+  .texto-sesion { display: none; }
+  .encabezado-admin .container { align-items: flex-start !important; }
+  .menu-admin { position: static; }
+}
+
+.imagen-servicio {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  display: block;
+  background-color: var(--verde-salvia-suave);
+}
+.imagen-detalle {
+  max-height: 220px;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.stock-critico {
+  color: #a33a28 !important;
+  font-weight: 700;
+  white-space: nowrap;
+}

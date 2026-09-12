@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriVida — Nutrición con seguimiento real</title>
+  <meta name="description" content="Clínica Nutricional NutriVida en Temuco: consultas, planes personalizados y talleres con seguimiento digital.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <!-- ===================== ENCABEZADO ===================== -->
+  <header class="encabezado-nv">
+    <nav class="navbar navbar-expand-lg container py-3">
+      <a class="navbar-brand marca-nv" href="index.html">
+        <svg class="hoja-icono" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 2 3 6 3 11c0 6 5 10 9 11 4-1 9-5 9-11 0-5-4-9-9-9zm0 3.2c3.3 0 6 2.6 6 5.8 0 3.6-2.7 6.6-6 8-3.3-1.4-6-4.4-6-8 0-3.2 2.7-5.8 6-5.8z"/></svg>
+        NutriVida
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacionPrincipal" aria-controls="navegacionPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navegacionPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Ingresar</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a href="carrito.html" class="nav-link enlace-carrito">Carrito <span data-contador-carrito class="badge contador-carrito d-none">0</span></a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a href="agendar.html" class="btn btn-nv-primario btn-sm">Agendar hora</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero-nv">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <article class="col-lg-6">
+            <p class="eyebrow-libre mb-2">Clínica Nutricional NutriVida · Temuco</p>
+            <h1>Nutrición con seguimiento real, no con fichas de papel</h1>
+            <p class="subcopia">Agenda tu hora, revisa tu progreso y conserva tu plan alimenticio siempre a mano. Cuatro nutricionistas, un solo lugar para seguir tu proceso completo.</p>
+            <p class="d-flex flex-wrap gap-3 mt-4">
+              <a href="agendar.html" class="btn btn-nv-primario">Agendar mi hora</a>
+              <a href="productos.html" class="btn btn-nv-secundario">Ver servicios y planes</a>
+            </p>
+            <dl class="row mt-5 gx-4 mb-0">
+              <div class="col-4 estadistica-hero">
+                <dt class="numero">4</dt>
+                <dd class="etiqueta mb-0">Nutricionistas</dd>
+              </div>
+              <div class="col-4 estadistica-hero">
+                <dt class="numero">~60</dt>
+                <dd class="etiqueta mb-0">Pacientes / semana</dd>
+              </div>
+              <div class="col-4 estadistica-hero">
+                <dt class="numero">2016</dt>
+                <dd class="etiqueta mb-0">Año de fundación</dd>
+              </div>
+            </dl>
+          </article>
+          <figure class="col-lg-6 text-center m-0">
+            <svg class="hero-ilustracion" viewBox="0 0 420 380" role="img" aria-label="Ilustración de un plato con alimentos y una línea de seguimiento de progreso">
+              <circle cx="190" cy="210" r="150" fill="var(--verde-salvia-suave)"/>
+              <circle cx="190" cy="210" r="108" fill="#ffffff" stroke="var(--borde-suave)" stroke-width="3"/>
+              <path d="M150 175c-18-22-8-52 16-58 6 20 2 44-16 58z" fill="var(--verde-bosque)"/>
+              <path d="M150 175c8-16 26-24 44-16-6 18-24 28-44 16z" fill="var(--verde-salvia)"/>
+              <circle cx="222" cy="222" r="34" fill="var(--ocre)"/>
+              <circle cx="150" cy="240" r="20" fill="#e6c58a"/>
+              <g stroke="var(--ocre-oscuro)" stroke-width="3" fill="none" stroke-linecap="round">
+                <path d="M60 90 q40 -40 90 -20 t100 10" stroke-dasharray="2 12"/>
+              </g>
+              <circle cx="60" cy="90" r="6" fill="var(--ocre-oscuro)"/>
+              <circle cx="150" cy="68" r="6" fill="var(--ocre-oscuro)"/>
+              <circle cx="250" cy="80" r="6" fill="var(--ocre-oscuro)"/>
+              <circle cx="330" cy="72" r="8" fill="var(--verde-bosque)"/>
+              <path d="M324 72l4 5 9-10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== POR QUÉ NUTRIVIDA ===================== -->
+    <section class="seccion seccion-alterna">
+      <div class="container">
+        <h2 class="titulo-seccion">Lo que cambia cuando tu proceso queda registrado</h2>
+        <p class="intro-seccion">Hoy la clínica agenda a mano y el 20% de las citas termina en inasistencia. Estos son los problemas concretos que buscamos resolver.</p>
+        <ul class="row g-4 list-unstyled">
+          <li class="col-md-4">
+            <article class="tarjeta-beneficio">
+              <svg class="icono-beneficio" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              <h3>Agenda tu hora sin llamar</h3>
+              <p>Solicita, cambia o cancela tu cita en línea, indicando el nutricionista y el motivo de consulta.</p>
+            </article>
+          </li>
+          <li class="col-md-4">
+            <article class="tarjeta-beneficio">
+              <svg class="icono-beneficio" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-6 3 4 5-8"/></svg>
+              <h3>Tu progreso siempre visible</h3>
+              <p>Mediciones y planes alimenticios digitales, disponibles entre sesiones desde cualquier dispositivo.</p>
+            </article>
+          </li>
+          <li class="col-md-4">
+            <article class="tarjeta-beneficio">
+              <svg class="icono-beneficio" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11z"/></svg>
+              <h3>Datos clínicos protegidos</h3>
+              <p>Solo tú y tu nutricionista asignado pueden ver tus mediciones, diagnósticos y avances.</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICIOS DESTACADOS ===================== -->
+    <section class="seccion">
+      <div class="container">
+        <h2 class="titulo-seccion">Servicios más solicitados</h2>
+        <p class="intro-seccion">Una muestra de nuestro catálogo. Puedes revisar el listado completo, con filtros por tipo de servicio, en la sección Servicios.</p>
+        <ul class="row g-4 list-unstyled">
+          <li class="col-sm-6 col-lg-3">
+            <article class="tarjeta-servicio">
+              <span class="franja-tipo">Consulta</span>
+              <div class="cuerpo-servicio">
+                <h3>Primera consulta nutricional</h3>
+                <p class="meta-servicio">50 min · Presencial</p>
+                <p class="descripcion-servicio">Anamnesis, antropometría completa y tu primer plan alimenticio.</p>
+                <p class="precio-servicio">$35.000</p>
+                <div class="d-flex gap-2 mt-auto"><a href="producto-detalle.html?codigo=CN001" class="btn btn-nv-secundario btn-sm flex-grow-1">Ver detalle</a><a href="agendar.html?codigo=CN001" class="btn btn-nv-primario btn-sm flex-grow-1">Agendar</a></div>
+              </div>
+            </article>
+          </li>
+          <li class="col-sm-6 col-lg-3">
+            <article class="tarjeta-servicio">
+              <span class="franja-tipo">Plan especializado</span>
+              <div class="cuerpo-servicio">
+                <h3>Plan pérdida de peso (1 mes)</h3>
+                <p class="meta-servicio">— · Presencial</p>
+                <p class="descripcion-servicio">Primera consulta + control quincenal + seguimiento por WhatsApp.</p>
+                <p class="precio-servicio">$65.000</p>
+                <div class="d-flex gap-2 mt-auto"><a href="producto-detalle.html?codigo=PL001" class="btn btn-nv-secundario btn-sm flex-grow-1">Ver detalle</a><a href="agendar.html?codigo=PL001" class="btn btn-nv-primario btn-sm flex-grow-1">Agendar</a></div>
+              </div>
+            </article>
+          </li>
+          <li class="col-sm-6 col-lg-3">
+            <article class="tarjeta-servicio">
+              <span class="franja-tipo">Evaluación</span>
+              <div class="cuerpo-servicio">
+                <h3>Bioimpedanciometría</h3>
+                <p class="meta-servicio">15 min · Presencial</p>
+                <p class="descripcion-servicio">Masa grasa, masa muscular, agua corporal y edad metabólica.</p>
+                <p class="precio-servicio">$12.000</p>
+                <div class="d-flex gap-2 mt-auto"><a href="producto-detalle.html?codigo=EV002" class="btn btn-nv-secundario btn-sm flex-grow-1">Ver detalle</a><a href="agendar.html?codigo=EV002" class="btn btn-nv-primario btn-sm flex-grow-1">Agendar</a></div>
+              </div>
+            </article>
+          </li>
+          <li class="col-sm-6 col-lg-3">
+            <article class="tarjeta-servicio">
+              <span class="franja-tipo">Taller grupal</span>
+              <div class="cuerpo-servicio">
+                <h3>Taller de cocina nutritiva</h3>
+                <p class="meta-servicio">120 min · Grupal</p>
+                <p class="descripcion-servicio">Preparación de recetas saludables. Incluye degustación.</p>
+                <p class="precio-servicio">$20.000</p>
+                <div class="d-flex gap-2 mt-auto"><a href="producto-detalle.html?codigo=TG002" class="btn btn-nv-secundario btn-sm flex-grow-1">Ver detalle</a><a href="agendar.html?codigo=TG002" class="btn btn-nv-primario btn-sm flex-grow-1">Agendar</a></div>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <p class="text-center mt-4">
+          <a href="productos.html" class="btn btn-nv-primario">Ver todos los servicios</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===================== EQUIPO ===================== -->
+    <section class="seccion seccion-alterna">
+      <div class="container">
+        <h2 class="titulo-seccion">Conoce a nuestro equipo</h2>
+        <p class="intro-seccion">Cuatro nutricionistas, cada uno con su propia especialidad.</p>
+        <ul class="row g-4 list-unstyled">
+          <li class="col-sm-6 col-lg-3">
+            <article class="tarjeta-nutricionista">
+              <div class="avatar-iniciales">CF</div>
+              <div>
+                <h3>Carolina Fuentes</h3>
+                <p class="especialidad">Obesidad y síndrome metabólico</p>
+                <p class="horario">Lun, mié y vie · 09:00–17:00</p>
+              </div>
+            </article>
+          </li>
+          <li class="col-sm-6 col-lg-3">
+            <article class="tarjeta-nutricionista">
+              <div class="avatar-iniciales">RS</div>
+              <div>
+                <h3>Rodrigo Sepúlveda</h3>
+                <p class="especialidad">Nutrición deportiva y rendimiento</p>
+                <p class="horario">Mar, jue y sáb · 09:00–14:00</p>
+              </div>
+            </article>
+          </li>
+          <li class="col-sm-6 col-lg-3">
+            <article class="tarjeta-nutricionista">
+              <div class="avatar-iniciales">DM</div>
+              <div>
+                <h3>Daniela Morales</h3>
+                <p class="especialidad">Vegetariana, vegana y TCA</p>
+                <p class="horario">Lun a vie · 08:00–13:00</p>
+              </div>
+            </article>
+          </li>
+          <li class="col-sm-6 col-lg-3">
+            <article class="tarjeta-nutricionista">
+              <div class="avatar-iniciales">FA</div>
+              <div>
+                <h3>Felipe Araya</h3>
+                <p class="especialidad">Nutrición pediátrica y familiar</p>
+                <p class="horario">Mar a vie · 14:00–19:00</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <p class="text-center mt-4">
+          <a href="nosotros.html" class="btn btn-nv-secundario">Conocer más sobre nosotros</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== PIE DE PÁGINA ===================== -->
+  <footer class="pie-nv">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <p class="marca-pie mb-2">NutriVida</p>
+          <p>Asesoría nutricional personalizada en Temuco, Región de La Araucanía.</p>
+        </div>
+        <nav class="col-md-4" aria-label="Enlaces del pie de página">
+          <h4>Navegación</h4>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Servicios</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="col-md-4">
+          <h4>Atención</h4>
+          <address class="mb-0">
+            Lunes a viernes · 08:00–19:00<br>
+            <a href="mailto:contacto@nutrivida.cl">contacto@nutrivida.cl</a>
+          </address>
+        </div>
+      </div>
+      <div class="linea-pie">© 2026 Clínica Nutricional NutriVida. Proyecto académico DSY1104.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/almacenamiento.js"></script>
+</body>
+</html>
