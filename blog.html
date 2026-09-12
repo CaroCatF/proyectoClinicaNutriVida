@@ -6,6 +6,7 @@
   <title>Blog · NutriVida</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="css/estilos.css">
+
 </head>
 <body>
 
@@ -26,7 +27,6 @@
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="blog.html">Blog</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
           <li class="nav-item"><a class="nav-link" href="login.html">Ingresar</a></li>
-          <li class="nav-item ms-lg-2 mt-2 mt-lg-0"><a href="carrito.html" class="nav-link enlace-carrito">Carrito <span data-contador-carrito class="badge contador-carrito d-none">0</span></a></li>
           <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
             <a href="agendar.html" class="btn btn-nv-primario btn-sm">Agendar hora</a>
           </li>
@@ -41,20 +41,10 @@
         <h1 class="titulo-seccion">Blog NutriVida</h1>
         <p class="intro-seccion">Notas breves de nuestro equipo sobre alimentación, hábitos y mitos frecuentes en consulta.</p>
 
-        <ul class="row g-4 list-unstyled">
-          <li class="col-md-6">
-            <article class="tarjeta-blog">
-              <figure class="portada-blog" style="background-color: var(--verde-bosque);">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 13c1 1.5 2.5 2 4 2s3-.5 4-2M9 9h.01M15 9h.01"/></svg>
-              </figure>
-              <div class="cuerpo-blog">
-                <h3>5 mitos sobre las dietas restrictivas</h3>
-                <p>Revisamos las creencias más comunes que escuchamos en consulta sobre "dietas milagro" y por qué casi siempre terminan en efecto rebote.</p>
-                <a href="blog-mitos-dietas.html" class="btn btn-nv-secundario btn-sm">Leer artículo</a>
-              </div>
-            </article>
-          </li>
-          <li class="col-md-6">
+        <!-- Lista de artículos disponibles en el blog de NutriVida. -->
+        <ul class="row g-4 list-unstyled lista-blog">
+
+          <li class="col-md-8 mx-auto">
             <article class="tarjeta-blog">
               <figure class="portada-blog" style="background-color: var(--ocre);">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M8 2v4M16 2v4M3 10h18M8 15h.01M12 15h.01M16 15h.01"/></svg>
@@ -98,8 +88,7 @@
       <div class="linea-pie">© 2026 Clínica Nutricional NutriVida. Proyecto académico DSY1104.</div>
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <script src="js/almacenamiento.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
