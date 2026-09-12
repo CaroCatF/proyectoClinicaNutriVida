@@ -1,0 +1,11 @@
+/* =====================================================
+   ARTÍCULOS DEL BLOG - NutriVida
+   Estilos exclusivos de blog-mitos-dietas.html
+   y blog-habitos-trabajo.html
+   ===================================================== */
+
+article.entrada-blog p { max-width: 68ch; }
+article.entrada-blog h2 {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+}

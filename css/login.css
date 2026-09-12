@@ -1,0 +1,139 @@
+/* =====================================================
+   LOGIN - NutriVida
+   Estilos exclusivos de login.html
+   ===================================================== */
+
+/* El layout del login se mantiene vertical en escritorio/tablet
+   y pasa a una sola columna en móviles. */
+.login-layout {
+  min-height: 100vh;
+  display: flex;
+  align-items: stretch;
+}
+
+.login-info {
+  width: 60%;
+  min-height: 100vh;
+  background-color:rgb(14, 189, 157);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding: 3rem;
+}
+
+.login-info h1 {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin-bottom: 1rem;
+}
+
+.login-info p {
+  color: #f1efe6;
+  max-width: 55ch;
+  font-size: 1.05rem;
+}
+
+.login-panel {
+  width: 40%;
+  min-height: 100vh;
+  background-color: var(--crema);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+
+
+.login-form-container h2 {
+  color: var(--verde-bosque-oscuro);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 0.5rem;
+}
+
+.login-subtitulo {
+  color: var(--gris-calido);
+  margin-bottom: 2rem;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.login-link {
+  color: var(--verde-bosque);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  color: rgb(14, 189, 157);
+  text-decoration: underline;
+}
+
+
+@media (max-width: 991px) {
+  .login-info,
+  .login-panel {
+    padding: 2rem;
+  }
+
+  .login-info h1 {
+    font-size: 2.3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .login-layout {
+    flex-direction: column;
+  }
+
+  .login-info,
+  .login-panel {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .login-info {
+    padding: 3rem 1.5rem;
+  }
+
+  .login-info h1 {
+    font-size: 2rem;
+  }
+
+  .login-info p {
+    font-size: 0.95rem;
+  }
+
+  .login-panel {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .login-form-container {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 420px) {
+  .login-info {
+    padding: 2rem 1rem;
+  }
+
+  .login-panel {
+    padding: 2rem 1rem;
+  }
+
+  .login-info h1 {
+    font-size: 1.8rem;
+  }
+}

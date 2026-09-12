@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar hora · NutriVida</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/agendar.css">
+</head>
+<body>
+
+  <header class="encabezado-nv">
+    <nav class="navbar navbar-expand-lg container py-3">
+      <a class="navbar-brand marca-nv" href="index.html">
+        <svg class="hoja-icono" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 2 3 6 3 11c0 6 5 10 9 11 4-1 9-5 9-11 0-5-4-9-9-9zm0 3.2c3.3 0 6 2.6 6 5.8 0 3.6-2.7 6.6-6 8-3.3-1.4-6-4.4-6-8 0-3.2 2.7-5.8 6-5.8z"/></svg>
+        NutriVida
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacionPrincipal" aria-controls="navegacionPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navegacionPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Ingresar</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a href="agendar.html" class="btn btn-nv-primario btn-sm active" aria-current="page">Agendar hora</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-9 col-lg-7">
+            <h1 class="text-center mb-2">Agenda tu hora</h1>
+            <p class="text-center intro-seccion mx-auto">Elige el servicio, el nutricionista de tu preferencia y un horario disponible. Te confirmaremos por correo.</p>
+
+            <form id="formulario-agendar" class="tarjeta-formulario" novalidate>
+              <div class="mb-3">
+                <label for="agendar-nombre" class="form-label">Nombre completo</label>
+                <input type="text" id="agendar-nombre" class="form-control" placeholder="Ingresa tu nombre completo" maxlength="100" autocomplete="name">
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="agendar-correo" class="form-label">Correo electrónico</label>
+                <input type="email" id="agendar-correo" class="form-control" placeholder="nombre@gmail.com" maxlength="100" autocomplete="email">
+                <div class="invalid-feedback"></div>
+                <span class="texto-ayuda">Solo dominios @duoc.cl, @profesor.duoc.cl o @gmail.com. Aquí enviaremos la confirmación.</span>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="agendar-servicio" class="form-label">Servicio</label>
+                  <select id="agendar-servicio" class="form-select">
+                    <option value="">Selecciona un servicio</option>
+                  </select>
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="agendar-nutricionista" class="form-label">Nutricionista</label>
+                  <select id="agendar-nutricionista" class="form-select">
+                    <option value="">Sin preferencia / cualquiera disponible</option>
+                    <option value="Carolina Fuentes">Carolina Fuentes — Obesidad y síndrome metabólico</option>
+                    <option value="Rodrigo Sepúlveda">Rodrigo Sepúlveda — Nutrición deportiva</option>
+                    <option value="Daniela Morales">Daniela Morales — Vegetariana, vegana y TCA</option>
+                    <option value="Felipe Araya">Felipe Araya — Nutrición pediátrica</option>
+                  </select>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="agendar-fecha" class="form-label">Fecha</label>
+                  <input type="date" id="agendar-fecha" class="form-control">
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="agendar-horario" class="form-label">Horario</label>
+                  <select id="agendar-horario" class="form-select">
+                    <option value="">Selecciona un horario</option>
+                    <option value="09:00">09:00 horas</option>
+                    <option value="10:00">10:00 horas</option>
+                    <option value="11:00">11:00 horas</option>
+                    <option value="12:00">12:00 horas</option>
+                    <option value="14:00">14:00 horas</option>
+                    <option value="15:00">15:00 horas</option>
+                    <option value="16:00">16:00 horas</option>
+                    <option value="17:00">17:00 horas</option>
+                    <option value="18:00">18:00 horas</option>
+                  </select>
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="agendar-motivo" class="form-label">Motivo de la consulta (opcional)</label>
+                <textarea id="agendar-motivo" class="form-control" rows="3" maxlength="300" placeholder="Cuéntanos brevemente qué necesitas"></textarea>
+                <span id="contador-motivo" class="contador-caracteres">0 / 300</span>
+              </div>
+
+              <button type="submit" class="btn btn-nv-primario w-100 mt-2">Confirmar hora</button>
+            </form>
+            <div id="mensaje-resultado-agendar" role="alert"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-nv">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <p class="marca-pie mb-2">NutriVida</p>
+          <p>Asesoría nutricional personalizada en Temuco, Región de La Araucanía.</p>
+        </div>
+        <nav class="col-md-4" aria-label="Enlaces del pie de página">
+          <h4>Navegación</h4>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Servicios</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="col-md-4">
+          <h4>Atención</h4>
+          <address class="mb-0">
+            Lunes a viernes · 08:00–19:00<br>
+            <a href="mailto:contacto@nutrivida.cl">contacto@nutrivida.cl</a>
+          </address>
+        </div>
+      </div>
+      <div class="linea-pie">© 2026 Clínica Nutricional NutriVida. Proyecto académico DSY1104.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/catalogo.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/agendar.js"></script>
+</body>
+</html>

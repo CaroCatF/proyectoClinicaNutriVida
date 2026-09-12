@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta · NutriVida</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+
+  <header class="encabezado-nv">
+    <nav class="navbar navbar-expand-lg container py-3">
+      <a class="navbar-brand marca-nv" href="index.html">
+        <img src="img/hoja.png" alt="logo hoja" width="40" height="40">
+        NutriVida
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacionPrincipal" aria-controls="navegacionPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navegacionPrincipal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="login.html">Ingresar</a></li>
+          <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+            <a href="agendar.html" class="btn btn-nv-primario btn-sm">Agendar hora</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-9 col-lg-7">
+            <h1 class="text-center mb-2">Crea tu cuenta de paciente</h1>
+            <p class="text-center intro-seccion mx-auto">Regístrate para agendar tus horas y llevar el historial de tus consultas en un solo lugar.</p>
+
+            <form id="formulario-registro" class="tarjeta-formulario" novalidate>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="registro-run" class="form-label">RUN</label>
+                  <input type="text" id="registro-run" class="form-control" placeholder="Ej: 761920839" maxlength="9">
+                  <div class="invalid-feedback"></div>
+                  <span class="texto-ayuda">Sin puntos ni guion, entre 7 y 9 caracteres.</span>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="registro-fecha-nacimiento" class="form-label">Fecha de nacimiento</label>
+                  <input type="date" id="registro-fecha-nacimiento" class="form-control">
+                  <span class="texto-ayuda">Opcional.</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="registro-nombre" class="form-label">Nombre</label>
+                  <input type="text" id="registro-nombre" class="form-control" placeholder="Ingresa tu nombre" maxlength="50">
+                  <div class="invalid-feedback"></div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="registro-apellidos" class="form-label">Apellidos</label>
+                  <input type="text" id="registro-apellidos" class="form-control" placeholder="Ingresa tus apellidos" maxlength="100">
+                  <div class="invalid-feedback"></div>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="registro-correo" class="form-label">Correo electrónico</label>
+                <input type="email" id="registro-correo" class="form-control" placeholder="nombre@correo.com" maxlength="100">
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="registro-direccion" class="form-label">Dirección</label>
+                <input type="text" id="registro-direccion" class="form-control" placeholder="Calle, número, comuna" maxlength="300">
+                <div class="invalid-feedback"></div>
+              </div>
+
+              <div class="mb-3">
+                <label for="registro-contrasena" class="form-label">Contraseña</label>
+                <input type="password" id="registro-contrasena" class="form-control" placeholder="Entre 4 y 10 caracteres" maxlength="10">
+                <div class="invalid-feedback"></div>
+                <span class="texto-ayuda">Debe tener entre 4 y 10 caracteres.</span>
+              </div>
+
+              <button type="submit" class="btn btn-nv-primario w-100 mt-2">Crear cuenta</button>
+              <p class="text-center mt-3 mb-0">¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+            </form>
+            <div id="mensaje-resultado-registro" role="alert"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-nv">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <p class="marca-pie mb-2">NutriVida</p>
+          <p>Asesoría nutricional personalizada en Temuco, Región de La Araucanía.</p>
+        </div>
+        <nav class="col-md-4" aria-label="Enlaces del pie de página">
+          <h4>Navegación</h4>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Servicios</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="col-md-4">
+          <h4>Atención</h4>
+          <address class="mb-0">
+            Lunes a viernes · 08:00–19:00<br>
+            <a href="mailto:contacto@nutrivida.cl">contacto@nutrivida.cl</a>
+          </address>
+        </div>
+      </div>
+      <div class="linea-pie">© 2026 Clínica Nutricional NutriVida. Proyecto académico DSY1104.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/validaciones.js"></script>
+</body>
+</html>
