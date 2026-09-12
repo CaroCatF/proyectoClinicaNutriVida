@@ -739,3 +739,55 @@ p,
     border-radius: 12px;
   }
 }
+
+/* ---------- Header público con degradado de la referencia ---------- */
+.encabezado-nv {
+  background: linear-gradient(90deg, #0F766E 0%, #14B8A6 52%, #2DD4BF 100%);
+  border-bottom: 0;
+  box-shadow: 0 2px 10px rgba(15, 118, 110, 0.16);
+}
+
+.encabezado-nv .marca-nv {
+  color: #ffffff !important;
+}
+
+.encabezado-nv .marca-nv .hoja-icono {
+  color: #ffffff;
+}
+
+.encabezado-nv .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.encabezado-nv .navbar-nav .nav-link.active,
+.encabezado-nv .navbar-nav .nav-link:hover {
+  color: #ffffff;
+  text-decoration-color: #CCFBF1;
+}
+
+.encabezado-nv .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.encabezado-nv .navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+.encabezado-nv .contador-carrito {
+  background-color: #ffffff;
+  color: #0F766E;
+}
+
+.encabezado-nv .btn-nv-primario {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #0F766E;
+  box-shadow: 0 4px 12px rgba(7, 75, 70, 0.16);
+}
+
+.encabezado-nv .btn-nv-primario:hover,
+.encabezado-nv .btn-nv-primario:focus {
+  background: #CCFBF1;
+  border-color: #CCFBF1;
+  color: #0F766E;
+}
