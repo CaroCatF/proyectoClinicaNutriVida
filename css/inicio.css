@@ -1,0 +1,148 @@
+/* =====================================================
+   INICIO - NutriVida
+   Estilos exclusivos de index.html
+   ===================================================== */
+
+.hero-nv {
+  padding: 4.5rem 0 4rem;
+}
+.hero-nv .eyebrow-libre { color: var(--gris-calido); }
+.hero-nv h1 {
+  font-size: clamp(2.1rem, 4vw, 3.2rem);
+  max-width: 14ch;
+}
+.hero-nv .subcopia {
+  font-size: 1.1rem;
+  color: var(--gris-calido);
+  max-width: 46ch;
+}
+.hero-ilustracion { width: 100%; max-width: 420px; }
+
+.estadistica-hero {
+  border-left: 3px solid var(--ocre);
+  padding-left: 0.9rem;
+}
+.estadistica-hero .numero {
+  font-family: var(--fuente-display);
+  font-size: 1.6rem;
+  color: var(--verde-bosque-oscuro);
+  font-weight: 700;
+  display: block;
+}
+.estadistica-hero .etiqueta {
+  color: var(--gris-calido);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.tarjeta-beneficio {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  padding: 1.6rem;
+  height: 100%;
+}
+.tarjeta-beneficio .icono-beneficio {
+  color: var(--ocre);
+  margin-bottom: 0.8rem;
+}
+.tarjeta-beneficio h3 { font-size: 1.15rem; }
+.tarjeta-beneficio p { color: var(--gris-calido); font-size: 0.96rem; }
+
+.tarjeta-servicio {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tarjeta-servicio .franja-tipo {
+  background-color: var(--verde-bosque);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.8rem;
+  align-self: flex-start;
+  border-bottom-right-radius: 8px;
+}
+.tarjeta-servicio .cuerpo-servicio {
+  padding: 1.1rem 1.2rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.tarjeta-servicio h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+.tarjeta-servicio .descripcion-servicio {
+  color: var(--gris-calido);
+  font-size: 0.92rem;
+  flex-grow: 1;
+}
+.tarjeta-servicio .precio-servicio {
+  font-family: var(--fuente-display);
+  color: var(--verde-bosque-oscuro);
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0.6rem 0;
+}
+.tarjeta-servicio .meta-servicio {
+  font-size: 0.82rem;
+  color: var(--gris-calido);
+  margin-bottom: 0.4rem;
+}
+
+.avatar-iniciales {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background-color: var(--verde-bosque);
+  color: #fff;
+  font-family: var(--fuente-display);
+  font-weight: 700;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.tarjeta-nutricionista {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  padding: 1.4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  height: 100%;
+}
+.tarjeta-nutricionista h3 { font-size: 1.05rem; margin-bottom: 0.15rem;}
+.tarjeta-nutricionista .especialidad {
+  color: var(--ocre-oscuro);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.tarjeta-nutricionista .horario {
+  color: var(--gris-calido);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 991px) {
+  .hero-nv h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+  .hero-ilustracion { max-width: 320px; }
+  .seccion { padding: 3rem 0; }
+}
+
+@media (max-width: 767px) {
+  .hero-nv { padding: 3rem 0 2.5rem; text-align: left; }
+  .seccion { padding: 2.5rem 0; }
+}
+
+@media (max-width: 420px) {
+  .hero-nv h1 { font-size: 1.8rem; }
+  .titulo-seccion { font-size: 1.5rem; }
+}

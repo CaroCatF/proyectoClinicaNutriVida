@@ -1,0 +1,46 @@
+/* =====================================================
+   BLOG - NutriVida
+   Estilos exclusivos de blog.html
+   ===================================================== */
+
+.tarjeta-blog {
+  background-color: var(--crema-tarjeta);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portada-blog {
+  height: 160px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.tarjeta-blog .cuerpo-blog { padding: 1.2rem; }
+.tarjeta-blog h3 { font-size: 1.1rem; }
+.tarjeta-blog p { color: var(--gris-calido); font-size: 0.94rem; }
+
+/* Centra la tarjeta disponible y mantiene una distribución
+   equilibrada cuando el blog contiene un solo artículo. */
+.lista-blog > li {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Centra el encabezado del blog y limita su ancho
+   para mantener una composición visual equilibrada. */
+.titulo-seccion {
+    text-align: center;
+}
+
+.intro-seccion {
+    max-width: 800px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}

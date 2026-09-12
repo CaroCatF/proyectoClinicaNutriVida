@@ -1,0 +1,20 @@
+/* =====================================================
+   SERVICIOS / PRODUCTOS - NutriVida
+   Estilos exclusivos de productos.html
+   ===================================================== */
+
+.filtro-categoria {
+  border: 1.5px solid var(--verde-bosque);
+  color: var(--verde-bosque-oscuro);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.35rem 1.1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.filtro-categoria.activo,
+.filtro-categoria:hover {
+  background-color: var(--verde-bosque);
+  color: #fff;
+}

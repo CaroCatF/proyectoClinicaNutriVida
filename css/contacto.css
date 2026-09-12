@@ -1,0 +1,13 @@
+/* =====================================================
+   CONTACTO - NutriVida
+   Estilos exclusivos de contacto.html
+   ===================================================== */
+
+/* Los estilos de formulario comunes están en global.css.
+   Aquí quedan únicamente ajustes propios de la pantalla. */
+
+@media (max-width: 767px) {
+  .seccion {
+    padding: 2.5rem 0;
+  }
+}
