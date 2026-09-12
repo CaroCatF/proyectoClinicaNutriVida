@@ -8,18 +8,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function crearTarjeta(servicio) {
     return (
-      '<li class="col-sm-6 col-lg-4">' +
+      '<li class="servicio-columna">' +
         '<article class="tarjeta-servicio">' +
           '<span class="franja-tipo">' + escaparHTML(servicio.tipo) + "</span>" +
-          '<img class="imagen-servicio" src="' + escaparHTML(servicio.imagen || "assets/servicio-placeholder.svg") + '" alt="Ilustración del servicio ' + escaparHTML(servicio.nombre) + '">' +
+          '<img class="imagen-servicio" src="' + escaparHTML(servicio.imagen && !servicio.imagen.includes("assets/") ? servicio.imagen : "imagenes/servicio-placeholder.svg") + '" alt="Ilustración del servicio ' + escaparHTML(servicio.nombre) + '">' +
           '<div class="cuerpo-servicio">' +
             "<h3>" + escaparHTML(servicio.nombre) + "</h3>" +
             '<p class="meta-servicio">' + escaparHTML(servicio.duracion) + " · " + escaparHTML(servicio.modalidad) + "</p>" +
             '<p class="descripcion-servicio">' + escaparHTML(servicio.descripcion) + "</p>" +
             '<p class="precio-servicio">' + formatearPrecioCLP(Number(servicio.precio) || 0) + "</p>" +
-            '<div class="d-flex gap-2 mt-auto flex-wrap">' +
-              '<a href="producto-detalle.html?codigo=' + encodeURIComponent(servicio.codigo) + '" class="btn btn-nv-secundario btn-sm flex-grow-1">Ver detalle</a>' +
-              '<button type="button" data-agregar-carrito="' + escaparHTML(servicio.codigo) + '" class="btn btn-nv-primario btn-sm flex-grow-1">Añadir</button>' +
+            '<div class="acciones-servicio">' +
+              '<a href="producto-detalle.html?codigo=' + encodeURIComponent(servicio.codigo) + '" class="btn btn-nv-secundario boton-servicio">Ver detalle</a>' +
+              '<button type="button" data-agregar-carrito="' + escaparHTML(servicio.codigo) + '" class="btn btn-nv-primario boton-servicio">Añadir</button>' +
             "</div>" +
             '<a href="agendar.html?codigo=' + encodeURIComponent(servicio.codigo) + '" class="enlace-agenda-servicio">Agendar este servicio</a>' +
           "</div>" +
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     if (listaFiltrada.length === 0) {
-      contenedor.innerHTML = '<li class="col-12"><div class="alert alert-info">No hay servicios disponibles en esta categoría.</div></li>';
+      contenedor.innerHTML = '<li class="servicio-columna servicio-columna-vacio"><div class="mensaje-sin-servicios">No hay servicios disponibles en esta categoría.</div></li>';
       return;
     }
     contenedor.innerHTML = listaFiltrada.map(crearTarjeta).join("");

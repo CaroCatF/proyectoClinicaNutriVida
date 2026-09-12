@@ -566,6 +566,15 @@ p,
   text-decoration-color: var(--primary-500);
 }
 
+.btn-nv-primario,
+.btn-nv-secundario {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.2;
+}
+
 .btn-nv-primario {
   background: linear-gradient(135deg, #0F766E 0%, #0D9488 40%, #2DD4BF 100%);
   border: 1px solid transparent;
@@ -790,4 +799,291 @@ p,
   background: #CCFBF1;
   border-color: #CCFBF1;
   color: #0F766E;
+}
+
+/* ---------- Acciones de tarjetas alineadas ---------- */
+.tarjeta-servicio .cuerpo-servicio > .acciones-servicio {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0.65rem !important;
+  width: 100%;
+}
+
+.tarjeta-servicio .cuerpo-servicio > .acciones-servicio .boton-servicio {
+  width: 100%;
+  min-height: 3.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.15;
+  padding: 0.55rem 0.65rem;
+}
+
+@media (max-width: 380px) {
+  .tarjeta-servicio .cuerpo-servicio > .acciones-servicio {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Centrado horizontal del CTA “Ver todos los servicios” */
+main p.text-center.mt-4 {
+  width: 100%;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main p.text-center.mt-4 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------- Escala tipográfica ajustada para mejorar legibilidad ---------- */
+body {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1rem;
+}
+
+.marca-nv {
+  font-size: 1.6rem;
+}
+
+.hero-nv .subcopia {
+  font-size: 1.15rem;
+}
+
+.intro-seccion {
+  font-size: 1.08rem;
+}
+
+.tarjeta-beneficio p,
+.tarjeta-blog p,
+.tarjeta-servicio .descripcion-servicio {
+  font-size: 1rem;
+}
+
+.tarjeta-servicio h3,
+.tarjeta-blog h3 {
+  font-size: 1.2rem;
+}
+
+.tarjeta-servicio .meta-servicio {
+  font-size: 0.9rem;
+}
+
+.filtro-categoria {
+  font-size: 0.95rem;
+}
+
+.texto-ayuda,
+.pie-nv {
+  font-size: 0.95rem;
+}
+
+.contador-caracteres {
+  font-size: 0.9rem;
+}
+
+.pie-nv .marca-pie {
+  font-size: 1.45rem;
+}
+
+.linea-pie {
+  font-size: 0.9rem;
+}
+
+.menu-admin-titulo {
+  font-size: 0.85rem;
+}
+
+.metrica-label {
+  font-size: 0.95rem;
+}
+
+.texto-sesion {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 767px) {
+  .marca-nv {
+    font-size: 1.4rem;
+  }
+
+  .hero-nv .subcopia,
+  .intro-seccion {
+    font-size: 1rem;
+  }
+}
+
+/* ---------- Legibilidad reforzada según la referencia ---------- */
+.navbar-nav .nav-link {
+  font-size: 1.1rem;
+}
+
+.marca-nv {
+  font-size: 1.75rem;
+}
+
+.hero-nv h1 {
+  font-size: clamp(2.35rem, 4.5vw, 3.5rem);
+}
+
+.hero-nv .subcopia {
+  font-size: 1.2rem;
+}
+
+.intro-seccion {
+  font-size: 1.15rem;
+}
+
+.tarjeta-beneficio p,
+.tarjeta-blog p,
+.tarjeta-servicio .descripcion-servicio {
+  font-size: 1.05rem;
+}
+
+.tarjeta-servicio .meta-servicio {
+  font-size: 0.95rem;
+}
+
+.form-label,
+.form-control,
+.form-select,
+.btn-nv-primario,
+.btn-nv-secundario {
+  font-size: 1rem;
+}
+
+.texto-ayuda,
+.pie-nv {
+  font-size: 1rem;
+}
+
+.pie-nv .marca-pie {
+  font-size: 1.5rem;
+}
+
+.linea-pie {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 767px) {
+  .navbar-nav .nav-link {
+    font-size: 1rem;
+  }
+
+  .marca-nv {
+    font-size: 1.5rem;
+  }
+
+  .hero-nv h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-nv .subcopia,
+  .intro-seccion {
+    font-size: 1.05rem;
+  }
+}
+
+/* ---------- Componentes semánticos del catálogo y detalle ---------- */
+#grilla-servicios > .servicio-columna {
+  width: 100%;
+}
+
+@media (min-width: 576px) {
+  #grilla-servicios > .servicio-columna {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  #grilla-servicios > .servicio-columna {
+    width: 33.333333%;
+  }
+}
+
+.servicio-columna-vacio {
+  width: 100% !important;
+}
+
+.mensaje-sin-servicios,
+.mensaje-detalle-error {
+  background-color: var(--primary-50);
+  border: 1px solid var(--borde-suave);
+  border-radius: 10px;
+  color: var(--primary-900);
+  padding: 1rem 1.25rem;
+}
+
+.acciones-servicio {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.boton-servicio,
+.boton-detalle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.15;
+  text-decoration: none;
+}
+
+.boton-servicio {
+  width: 100%;
+  min-height: 3.25rem;
+  padding: 0.55rem 0.65rem;
+}
+
+.acciones-detalle-servicio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.boton-detalle {
+  min-height: 2.75rem;
+}
+
+.titulo-detalle-servicio {
+  margin-top: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.meta-detalle-servicio {
+  color: var(--gris-calido);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.precio-detalle-servicio {
+  color: var(--verde-bosque-oscuro);
+  font-family: var(--fuente-display);
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.mensaje-carrito-detalle {
+  margin-top: 1rem;
+}
+
+@media (max-width: 380px) {
+  .acciones-servicio {
+    grid-template-columns: 1fr;
+  }
 }
